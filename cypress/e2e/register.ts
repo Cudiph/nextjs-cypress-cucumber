@@ -25,6 +25,7 @@ When('user register with', (data: DataTable) => {
 
 Then('user register again with', (data: DataTable) => {
   const creds = data.hashes()[0];
+  cy.wait(3000); // chilling down a bit
   cy.visit('/register');
   cy.get('input[name="username"]').type(creds.username)
   cy.get('input[name="password"]').type(creds.password)
