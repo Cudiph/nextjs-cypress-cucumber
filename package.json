@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "test": "cypress open"
   },
   "dependencies": {
     "bcrypt": "^5.1.1",
@@ -17,14 +18,17 @@
     "react-dom": "^18"
   },
   "devDependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^20.1.1",
+    "@cypress/webpack-preprocessor": "^6.0.2",
     "@types/bcrypt": "^5.0.2",
     "@types/better-sqlite3": "^7.6.11",
+    "@types/cypress-cucumber-preprocessor": "^4.0.5",
     "@types/jsonwebtoken": "^9.0.6",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "cypress": "^13.13.2",
-    "cypress-cucumber-preprocessor": "^4.3.1",
+    "ts-loader": "^9.5.1",
     "typescript": "^5"
   }
 }

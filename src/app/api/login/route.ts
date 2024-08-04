@@ -22,7 +22,9 @@ export async function POST(request: NextRequest) {
 
   const res = NextResponse.json({});
   const signed = jwt.sign({ username, iat: Math.floor(Date.now() / 1000) - 30 }, SECRET);
-  res.cookies.set("auth", signed, { httpOnly: true, sameSite: 'strict', secure: true });
+
+  // TODO: lets just use secure false for now
+  res.cookies.set("auth", signed, { httpOnly: true, sameSite: 'strict', secure: false });
 
   return res;
 }

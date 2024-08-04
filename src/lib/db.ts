@@ -2,6 +2,7 @@ import Database from 'better-sqlite3';
 
 let populated = false;
 const db = new Database(':memory:')
+// const db = new Database('data.sqlite')
 
 export interface CredentialSchema {
   username: string;

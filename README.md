@@ -1,4 +1,4 @@
-nextjs authenticator + cypress-cucumber project
+Nextjs login + cypress-cucumber test
 
 ## API endpoints
 
